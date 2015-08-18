@@ -100,7 +100,7 @@
   $u_i$    & proportion of sales on day $i$
  \end{tabular}
  \begin{equation}
-  \begin{bmatrix} \; & & \; \\ & X & \\ & & \end{bmatrix} = \begin{bmatrix} \vdots \\ U \\ \vdots \end{bmatrix} \times \begin{bmatrix} \hdots & V & \hdots \end{bmatrix}
+  \begin{bmatrix} \; & & \; \\ & X & \\ & & \end{bmatrix} \sim \begin{bmatrix} \vdots \\ U \\ \vdots \end{bmatrix} \times \begin{bmatrix} \cdots & V & \cdots \end{bmatrix}
  \end{equation}
  \begin{equation}
   \sum_i u_i = 1
@@ -121,7 +121,7 @@
  Log-likelihood:
  \begin{align}
   %p(X|U,V) &= \prod_{i,j} \left[\frac{ \exp(-u_i v_j) (u_i v_j)^{x_{ij}} }{ x_{ij}! }\right]^{m_{ij}} \\
-  \mathcal{L}(U,V) &= \sum_{i,j} m_{i,j} \left[ -u_i v_j + x_{ij}\log(u_i v_j) - \log(x_{ij}!) \right]
+  \mathcal{L}(U,V) &= \sum_{i,j} m_{ij} \left[ -u_i v_j + x_{ij}\log(u_i v_j) - \log(x_{ij}!) \right]
  \end{align}
  
  Maximize iteratively:
